@@ -1,4 +1,4 @@
-# Meet Cortana: your friend
+# Meet cortana_ka_ex: your friend
 
 # Import necessary libraries
 import io
@@ -53,7 +53,7 @@ def greeting(sentence):
 
 # Generating a response
 def response(user_response):
-    Cortana_response = ''
+    cortana_ka_ex_response = ''
     sent_tokens.append(user_response)
     TfidfVec = TfidfVectorizer(tokenizer=LemNormalize, stop_words='english')
     tfidf = TfidfVec.fit_transform(sent_tokens)
@@ -63,29 +63,29 @@ def response(user_response):
     flat.sort()
     req_tfidf = flat[-2]
     if req_tfidf == 0:
-        Cortana_response = Cortana_response + "I am sorry! I don't understand you"
-        return Cortana_response
+        cortana_ka_ex_response = cortana_ka_ex_response + "I am sorry! I don't understand you"
+        return cortana_ka_ex_response
     else:
-        Cortana_response = Cortana_response + sent_tokens[idx]
-        return Cortana_response
+        cortana_ka_ex_response = cortana_ka_ex_response + sent_tokens[idx]
+        return cortana_ka_ex_response
 
 # Main chat loop
 flag = True
-print("Cortana: My name is Cortana. I will answer your queries about Chatbots. If you want to exit, type Bye!")
+print("cortana_ka_ex: My name is cortana_ka_ex. I will answer your queries about Chatbots. If you want to exit, type Bye!")
 while flag:
     user_response = input()
     user_response = user_response.lower()
     if user_response != 'bye':
         if user_response in ('thanks', 'thank you'):
             flag = False
-            print("Cortana: You are welcome..")
+            print("cortana_ka_ex: You are welcome..")
         else:
             if greeting(user_response) is not None:
-                print("Cortana: " + greeting(user_response))
+                print("cortana_ka_ex: " + greeting(user_response))
             else:
-                print("Cortana: ", end="")
+                print("cortana_ka_ex: ", end="")
                 print(response(user_response))
                 sent_tokens.remove(user_response)
     else:
         flag = False
-        print("Cortana: Bye! Take care..")
+        print("cortana_ka_ex: Bye! Take care..")

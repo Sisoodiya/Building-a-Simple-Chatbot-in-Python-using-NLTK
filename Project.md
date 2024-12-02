@@ -1,11 +1,11 @@
 # Chatbot Project
 
-This project implements a simple chatbot named Cortana using Python. The chatbot can respond to user queries about chatbots and engage in basic conversation.
+This project implements a simple chatbot named cortana_ka_ex using Python. The chatbot can respond to user queries about chatbots and engage in basic conversation.
 
 ## Features
 
-- **Greeting Responses**: Cortana can recognize and respond to greetings.
-- **Query Responses**: Cortana uses TF-IDF vectorization and cosine similarity to generate responses to user queries based on a provided text corpus.
+- **Greeting Responses**: cortana_ka_ex can recognize and respond to greetings.
+- **Query Responses**: cortana_ka_ex uses TF-IDF vectorization and cosine similarity to generate responses to user queries based on a provided text corpus.
 - **Interactive Chat Loop**: The chatbot runs in a loop, allowing continuous interaction until the user types "Bye".
 
 ## Libraries Used
@@ -41,11 +41,11 @@ python3 chatbot.py
 ## Example Interaction
 
 ``` 
-Cortana: My name is Cortana. I will answer your queries about Chatbots. If you want to exit, type Bye!
+cortana_ka_ex: My name is cortana_ka_ex. I will answer your queries about Chatbots. If you want to exit, type Bye!
 User: Hello
-Cortana: hi
+cortana_ka_ex: hi
 User: What is a chatbot?
-Cortana: [Response based on the text corpus]
+cortana_ka_ex: [Response based on the text corpus]
 User: Bye
-Cortana: Bye! Take care..
+cortana_ka_ex: Bye! Take care..
 ```
